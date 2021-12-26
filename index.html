@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popomon's Blog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <link rel="stylesheet" href="./images/typography.css">
+  <link rel="stylesheet" href="./images/variable.css">
+  <link rel="stylesheet" href="./images/reset.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body id="body">
+  <aside id="drawer">
+    <div class="drawer-container">
+      <div class="logo">
+        <div class="dot-shadow">
+          <div class="dot"></div>
+          <div class="dot-background"></div>
+        </div>
+        <h1>POPO</h1>
+      </div>
+      <div class="dropdown">
+        <div class="selected">
+          <div class="icon">
+            <i class="fas fa-dice-d6"></i>
+          </div>
+          <div class="category-info">
+            <div class="category-title">Hong jisung</div>
+            <div class="category-tag">Frontend Developer</div>
+          </div>
+          <div class="down">
+            <!-- <i class="fas fa-chevron-down"></i> -->
+          </div>
+        </div>
+      </div>
+      <nav class="lnb">
+        <ul class="categories">
+          <li class="category active">
+            <a class="link" href="#">
+              <span class="icon">
+                <i class="fas fa-bowling-ball"></i>
+              </span>
+              <span class="name">Work</span>
+              <span class="number">N</span>
+            </a>
+          </li>
+          <li class="category disabled">
+            <a class="link" href="#">
+              <span class="icon">
+                <i class="fas fa-bowling-ball"></i>
+              </span>
+              <span class="name">Practice</span>
+              <span class="number">N</span>
+            </a>
+          </li>
+          <li class="category disabled">
+            <a class="link" href="#">
+              <span class="icon">
+                <i class="fas fa-bowling-ball"></i>
+              </span>
+              <span class="name">Food</span>
+              <span class="number">N</span>
+            </a>
+          </li>
+        </ul>
+        <div class="line"></div>
+        <div class="point-card">
+          <div class="image">
+            <img src="./images/point-card.svg" alt="">
+          </div>
+          <button class="button">Subscribe to the blog</button>
+        </div>
+      </nav>
+    </div>
+  </aside>
+  <section id="contents">
+    <div class="container">
+      <div id="work" class="content">
+        <h2 class="title t-1">
+          <span>Overview</span>
+          <div class="now">
+            <i class="far fa-calendar"></i>
+            <div class="date">Wed Dec 22</div>
+          </div>
+        </h2>
+        <div class="row">
+          <div class="card link">
+            <div class="compact">
+              <div class="info">
+                <div class="number">0</div>
+                <div class="label">New Features</div>
+              </div>
+              <div class="icon yellow">
+                <i class="fas fa-meteor"></i>
+              </div>
+            </div>
+          </div>
+          <div class="card link">
+            <div class="compact">
+              <div class="info">
+                <div class="number">0</div>
+                <div class="label">Project's Issues</div>
+              </div>
+              <div class="icon blue">
+                <i class="fas fa-exclamation-triangle"></i>
+              </div>
+            </div>
+          </div>
+          <div class="card link">
+            <div class="compact">
+              <div class="info">
+                <div class="number">0</div>
+                <div class="label">CI/CD Test</div>
+              </div>
+              <div class="icon green">
+                <i class="fas fa-clipboard-check"></i>
+              </div>
+            </div>
+          </div>
+          <div class="card link">
+            <div class="compact">
+              <div class="info">
+                <div class="number">0</div>
+                <div class="label">Retrospect</div>
+              </div>
+              <div class="icon pink">
+                <i class="fas fa-sync-alt"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="title t-2">Posts</h2>
+        <div class="row mb-0">
+          <div class="card table">
+            <table>
+              <thead>
+                <tr>
+                  <th class="center">Order</th>
+                  <th class="left">Date</th>
+                  <th class="left">Title</th>
+                  <th class="left">Translation</th>
+                  <th class="center">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="blue center">#2020</td>
+                  <td>2020. 10. 10</td>
+                  <td class="blue">
+                    <a href="/123">
+                      [프로젝트 관리] Git 저장소 폴더의 변경된 내용 저장하기
+                    </a>
+                  </td>
+                  <td>
+                    <span class="tag green">KO</span>
+                    <span class="tag pink">EN</span>
+                  </td>
+                  <td class="center">
+                    <span class="tag green">DONE</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="blue center">#2020</td>
+                  <td>2020. 10. 10</td>
+                  <td class="blue">
+                    <a href="/123">
+                      [프로젝트 관리] Git 저장소 폴더의 변경된 내용 저장하기
+                    </a>
+                  </td>
+                  <td>
+                    <span class="tag green">KO</span>
+                    <span class="tag pink">EN</span>
+                  </td>
+                  <td class="center">
+                    <span class="tag yellow">DOING</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="blue center">#2020</td>
+                  <td>2020. 10. 10</td>
+                  <td class="blue">
+                    <a href="/123">
+                      [프로젝트 관리] Git 저장소 폴더의 변경된 내용 저장하기
+                    </a>
+                  </td>
+                  <td>
+                    <span class="tag green">KO</span>
+                    <span class="tag pink">EN</span>
+                  </td>
+                  <td class="center">
+                    <span class="tag pink">TODO</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="practice" class="content">
+        <h2 class="title">Commit Log</h2>
+        <div class="row">
+          <div class="card large">
+            <div class="row">
+              <div class="card mb-0">
+                <img src="https://ghchart.rshah.org/6e92ff/jamesujeon" width="100%" />
+              </div>
+            </div>
+          </div>
+          <div class="card small">
+            <h3>개요</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
+          </div>
+        </div>
+      </div>
+      <div id="food" class="content">
+        <h2 class="title">Overview</h2>
+        <div class="row">
+          <div class="card large">
+            <h3>개요</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
+          </div>
+          <div class="card small">
+            <h3>개요</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="card">
+            <h3>개요</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
+          </div>
+          <div class="card">
+            <h3>개요</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
+          </div>
+          <div class="card">
+            <h3>개요</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="loading">
+    <img src="./images/spinner.svg">
+  </div>
+</body>
+<script src="./images/script.js"></script>
+</html>
