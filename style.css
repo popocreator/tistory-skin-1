@@ -121,6 +121,7 @@
   font-weight: 900;
   padding-left: 20px;
   color: #193a9f;
+  text-decoration: none;
 }
 .dot-shadow {
   position: relative;
@@ -515,4 +516,39 @@ table td .tag.yellow {
 table td .tag.pink {
   background-color: var(--color-pink-light);
   color: var(--color-pink);
+}
+
+#page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.page-header {
+  height: 80px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page-header .page-container {
+  width: 100%;
+  max-width: 740px;
+  display: flex;
+  align-items: center;
+}
+.page-logo {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.page-logo img {
+  display: inline-block;
+  height: 20px;
+}
+.page-category {
+}
+.page-content {
 }
