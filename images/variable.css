@@ -27,4 +27,15 @@
   /* Colors - Comtents */
   --color-title: #343d6a;
   --color-subtitle: #7a8fbf;
+
+  /* Green Eyes */
+  --color-page-title: #414f3e;
+  --color-page-point: #99ab7c;
+  --color-page-light: #e4e1df;
+  --color-page-black: #27322a;
+  --color-page-background: #e4e1df33;
+  --color-page-subtitle: #99ab7c;
+  --color-page-desc: #27322a;
+  --color-page-border: #bfc4a4;
+  --color-page-reply-background: #e4e1df33;
 }

@@ -1,39 +1,12 @@
 const work = [
   {
-    catogory: "New Features",
-    order: 1,
-    date: "2022. 01. 01",
-    title: "3 Easy Ways To Make Your iPhone Faster",
-    link: "/100",
-    translation: ["ko", ""],
-    status: "done"
-  },
-  {
-    catogory: "Project's Issues",
-    order: 1,
-    date: "2022. 01. 01",
-    title: "3 Easy Ways To Make Your iPhone Faster",
-    link: "/100",
-    translation: ["ko", "en"],
-    status: "doing"
-  },
-  {
-    catogory: "CI/CD Test",
-    order: 1,
-    date: "2022. 01. 01",
-    title: "3 Easy Ways To Make Your iPhone Faster",
-    link: "/100",
-    translation: ["ko", ""],
-    status: "todo"
-  },
-  {
     catogory: "Retrospect",
     order: 1,
-    date: "2022. 01. 01",
-    title: "3 Easy Ways To Make Your iPhone Faster",
-    link: "/100",
-    translation: ["ko", "en"],
-    status: "todo"
+    date: "2022. 01. 03",
+    title: "개발 프로세스를 어디까지 자동화 할 수 있을까?",
+    link: "/39",
+    translation: ["ko", ""],
+    status: "done"
   }
 ];
 

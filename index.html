@@ -1,277 +1,363 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Popomon's Blog</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-  <link rel="stylesheet" href="./images/typography.css">
-  <link rel="stylesheet" href="./images/variable.css">
-  <link rel="stylesheet" href="./images/reset.css">
-  <link rel="stylesheet" href="./style.css">
-  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
-</head>
-<body id="body" data-type="">
-  <aside id="drawer">
-    <div class="drawer-container">
-      <a class="logo" href="/">
-        <div class="dot-shadow">
-          <div class="dot"></div>
-          <div class="dot-background"></div>
-        </div>
-        <h1>POPO</h1>
-      </a>
-      <div class="dropdown">
-        <div class="selected">
-          <div class="icon">
-            <i class="fas fa-dice-d6"></i>
-          </div>
-          <div class="category-info">
-            <div class="category-title">Hong jisung</div>
-            <div class="category-tag">Frontend Developer</div>
-          </div>
-          <div class="down">
-            <!-- <i class="fas fa-chevron-down"></i> -->
-          </div>
-        </div>
-      </div>
-      <nav class="lnb">
-        <ul class="categories">
-          <li class="category active">
-            <a class="link" href="#" onclick="renderWorks()">
-              <span class="icon">
-                <i class="fas fa-bowling-ball"></i>
-              </span>
-              <span class="name">Work</span>
-              <span class="number">N</span>
-            </a>
-          </li>
-          <li class="category disabled">
-            <a class="link" href="#">
-              <span class="icon">
-                <i class="fas fa-bowling-ball"></i>
-              </span>
-              <span class="name">Practice</span>
-              <span class="number">N</span>
-            </a>
-          </li>
-          <li class="category disabled">
-            <a class="link" href="#">
-              <span class="icon">
-                <i class="fas fa-bowling-ball"></i>
-              </span>
-              <span class="name">Food</span>
-              <span class="number">N</span>
-            </a>
-          </li>
-        </ul>
-        <div class="line"></div>
-        <div class="point-card">
-          <div class="image">
-            <img src="./images/point-card.svg" alt="">
-          </div>
-          <button class="button">Subscribe to the blog</button>
-        </div>
-      </nav>
-    </div>
-  </aside>
-  <section id="contents">
-    <div class="container">
-      <div id="work" class="content">
-        <h2 class="title t-1">
-          <span>Overview</span>
-          <div class="now">
-            <i class="far fa-calendar"></i>
-            <div class="date">Wed Dec 22</div>
-          </div>
-        </h2>
-        <div class="row">
-          <div class="card link new-features" onclick="renderWorks('New Features')">
-            <div class="compact">
-              <div class="info">
-                <div class="number">0</div>
-                <div class="label">New Features</div>
-              </div>
-              <div class="icon yellow">
-                <i class="fas fa-meteor"></i>
-              </div>
-            </div>
-          </div>
-          <div class="card link project-issues" onclick="renderWorks('Project\'s Issues')">
-            <div class="compact">
-              <div class="info">
-                <div class="number">0</div>
-                <div class="label">Project's Issues</div>
-              </div>
-              <div class="icon blue">
-                <i class="fas fa-exclamation-triangle"></i>
-              </div>
-            </div>
-          </div>
-          <div class="card link ci-cd-test" onclick="renderWorks('CI/CD Test')">
-            <div class="compact">
-              <div class="info">
-                <div class="number">0</div>
-                <div class="label">CI/CD Test</div>
-              </div>
-              <div class="icon green">
-                <i class="fas fa-clipboard-check"></i>
-              </div>
-            </div>
-          </div>
-          <div class="card link retrospect" onclick="renderWorks('Retrospect')">
-            <div class="compact">
-              <div class="info">
-                <div class="number">0</div>
-                <div class="label">Retrospect</div>
-              </div>
-              <div class="icon pink">
-                <i class="fas fa-sync-alt"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <h2 class="title t-2">Posts</h2>
-        <div class="row mb-0">
-          <div class="card table">
-            <table id="post-table">
-              <colgroup>
-                <col width="15%">
-                <col width="15%">
-              </colgroup>
-              <thead>
-                <tr>
-                  <th class="left">Category</th>
-                  <th class="left">Date</th>
-                  <th class="left">Title</th>
-                  <th class="left">Translation</th>
-                  <th class="center">Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="blue center">#2020</td>
-                  <td>2020. 10. 10</td>
-                  <td class="blue">
-                    <a href="/123">
-                      [프로젝트 관리] Git 저장소 폴더의 변경된 내용 저장하기
-                    </a>
-                  </td>
-                  <td>
-                    <span class="tag green">KO</span>
-                    <span class="tag pink">EN</span>
-                  </td>
-                  <td class="center">
-                    <span class="tag green">DONE</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="blue center">#2020</td>
-                  <td>2020. 10. 10</td>
-                  <td class="blue">
-                    <a href="/123">
-                      [프로젝트 관리] Git 저장소 폴더의 변경된 내용 저장하기
-                    </a>
-                  </td>
-                  <td>
-                    <span class="tag green">KO</span>
-                    <span class="tag pink">EN</span>
-                  </td>
-                  <td class="center">
-                    <span class="tag yellow">DOING</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="blue center">#2020</td>
-                  <td>2020. 10. 10</td>
-                  <td class="blue">
-                    <a href="/123">
-                      [프로젝트 관리] Git 저장소 폴더의 변경된 내용 저장하기
-                    </a>
-                  </td>
-                  <td>
-                    <span class="tag green">KO</span>
-                    <span class="tag pink">EN</span>
-                  </td>
-                  <td class="center">
-                    <span class="tag pink">TODO</span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-      <div id="practice" class="content">
-        <h2 class="title">Commit Log</h2>
-        <div class="row">
-          <div class="card large">
-            <div class="row">
-              <div class="card mb-0">
-                <img src="https://ghchart.rshah.org/6e92ff/jamesujeon" width="100%" />
-              </div>
-            </div>
-          </div>
-          <div class="card small">
-            <h3>개요</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
-          </div>
-        </div>
-      </div>
-      <div id="food" class="content">
-        <h2 class="title">Overview</h2>
-        <div class="row">
-          <div class="card large">
-            <h3>개요</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
-          </div>
-          <div class="card small">
-            <h3>개요</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="card">
-            <h3>개요</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
-          </div>
-          <div class="card">
-            <h3>개요</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
-          </div>
-          <div class="card">
-            <h3>개요</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="page" class="page">
-    <header class="page-header">
-      <div class="page-container">
-        <a href="#" class="page-logo">
-          <img src="./images/logo-2.png">
-        </a>
-        <div class="subscribe"></div>
-        <div class="subscribe"></div>
-      </div>
-    </header>
-    <div class="page-category">
-      <div class="page-container"></div>
-    </div>
-    <div class="page-title">
-      <div class="page-container"></div>
-    </div>
-    <div class="page-content">
-      <div class="page-container"></div>
-    </div>
-  </section>
-  <div id="loading">
-    <img src="./images/spinner.svg">
-  </div>
-</body>
-<script src="./images/db.1.work.js"></script>
-<script src="./images/script.js"></script>
+<html lang="ko">
+
+	<head>
+		<title>[##_page_title_##] :: [##_title_##]</title>
+		<meta name="title" content="[##_page_title_##] :: [##_title_##]" />
+		<meta name="description" Content="[##_desc_##]" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+		<link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
+		<link rel="shortcut icon" href="[##_blog_link_##]favicon.ico" />
+		<!-- 구글서치콘솔 -->
+		<meta name="google-site-verification" content="QarH7hLuJdAENicX0Xt-45Cq3XHPzy12P4UX3xk7JWw" />
+		<title>Popomon's Blog</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+		<link rel="stylesheet" href="./images/typography.css">
+		<link rel="stylesheet" href="./images/variable.css">
+		<link rel="stylesheet" href="./images/reset.css">
+		<link rel="stylesheet" href="./style.css">
+
+		<script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+	</head>
+	<body id="body" data-type="[##_body_id_##]">
+		<s_t3>
+			<aside id="drawer" style="display: none;">
+				<div class="drawer-container">
+					<a class="logo" href="[##_blog_link_##]">
+						<div class="dot-shadow">
+							<div class="dot"></div>
+							<div class="dot-background"></div>
+						</div>
+						<h1>POPO</h1>
+					</a>
+					<div class="dropdown">
+						<div class="selected">
+							<div class="icon">
+								<i class="fas fa-dice-d6"></i>
+							</div>
+							<div class="category-info">
+								<div class="category-title">Hong jisung</div>
+								<div class="category-tag">Frontend Developer</div>
+							</div>
+							<div class="down">
+								<!-- <i class="fas fa-chevron-down"></i> -->
+							</div>
+						</div>
+					</div>
+					<nav class="lnb">
+						<ul class="categories">
+							<li class="category active">
+								<a class="link" href="#" onclick="renderWorks()">
+									<span class="icon">
+										<i class="fas fa-bowling-ball"></i>
+									</span>
+									<span class="name">Work</span>
+									<span class="number">N</span>
+								</a>
+							</li>
+							<li class="category disabled">
+								<a class="link" href="#">
+									<span class="icon">
+										<i class="fas fa-bowling-ball"></i>
+									</span>
+									<span class="name">Practice</span>
+									<span class="number">N</span>
+								</a>
+							</li>
+							<li class="category disabled">
+								<a class="link" href="#">
+									<span class="icon">
+										<i class="fas fa-bowling-ball"></i>
+									</span>
+									<span class="name">Food</span>
+									<span class="number">N</span>
+								</a>
+							</li>
+						</ul>
+						<div class="line"></div>
+						<div class="point-card">
+							<div class="image">
+								<img src="./images/point-card.svg" alt="">
+							</div>
+							<button class="button">Subscribe to the blog</button>
+						</div>
+					</nav>
+				</div>
+			</aside>
+			<section id="contents" style="display: none;">
+				<div class="container">
+					<div id="work" class="content">
+						<h2 class="title t-1">
+							<span>Overview</span>
+							<div class="now">
+								<i class="far fa-calendar"></i>
+								<div class="date">Wed Dec 22</div>
+							</div>
+						</h2>
+						<div class="row">
+							<div class="card link new-features" onclick="renderWorks('New Features')">
+								<div class="compact">
+									<div class="info">
+										<div class="number">0</div>
+										<div class="label">New Features</div>
+									</div>
+									<div class="icon yellow">
+										<i class="fas fa-meteor"></i>
+									</div>
+								</div>
+							</div>
+							<div class="card link project-issues" onclick="renderWorks('Project\'s Issues')">
+								<div class="compact">
+									<div class="info">
+										<div class="number">0</div>
+										<div class="label">Project's Issues</div>
+									</div>
+									<div class="icon blue">
+										<i class="fas fa-exclamation-triangle"></i>
+									</div>
+								</div>
+							</div>
+							<div class="card link ci-cd-test" onclick="renderWorks('CI/CD Test')">
+								<div class="compact">
+									<div class="info">
+										<div class="number">0</div>
+										<div class="label">CI/CD Test</div>
+									</div>
+									<div class="icon green">
+										<i class="fas fa-clipboard-check"></i>
+									</div>
+								</div>
+							</div>
+							<div class="card link retrospect" onclick="renderWorks('Retrospect')">
+								<div class="compact">
+									<div class="info">
+										<div class="number">0</div>
+										<div class="label">Retrospect</div>
+									</div>
+									<div class="icon pink">
+										<i class="fas fa-sync-alt"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h2 class="title t-2">Posts</h2>
+						<div class="row mb-0">
+							<div class="card table">
+								<table id="post-table">
+									<colgroup>
+										<col width="15%">
+										<col width="15%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th class="left">Category</th>
+											<th class="left">Date</th>
+											<th class="left">Title</th>
+											<th class="left">Translation</th>
+											<th class="center">Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="blue center">#2020</td>
+											<td>2020. 10. 10</td>
+											<td class="blue">
+												<a href="/123">
+													[프로젝트 관리] Git 저장소 폴더의 변경된 내용 저장하기
+												</a>
+											</td>
+											<td>
+												<span class="tag green">KO</span>
+												<span class="tag pink">EN</span>
+											</td>
+											<td class="center">
+												<span class="tag green">DONE</span>
+											</td>
+										</tr>
+										<tr>
+											<td class="blue center">#2020</td>
+											<td>2020. 10. 10</td>
+											<td class="blue">
+												<a href="/123">
+													[프로젝트 관리] Git 저장소 폴더의 변경된 내용 저장하기
+												</a>
+											</td>
+											<td>
+												<span class="tag green">KO</span>
+												<span class="tag pink">EN</span>
+											</td>
+											<td class="center">
+												<span class="tag yellow">DOING</span>
+											</td>
+										</tr>
+										<tr>
+											<td class="blue center">#2020</td>
+											<td>2020. 10. 10</td>
+											<td class="blue">
+												<a href="/123">
+													[프로젝트 관리] Git 저장소 폴더의 변경된 내용 저장하기
+												</a>
+											</td>
+											<td>
+												<span class="tag green">KO</span>
+												<span class="tag pink">EN</span>
+											</td>
+											<td class="center">
+												<span class="tag pink">TODO</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div id="practice" class="content">
+						<h2 class="title">Commit Log</h2>
+						<div class="row">
+							<div class="card large">
+								<div class="row">
+									<div class="card mb-0">
+										<img src="https://ghchart.rshah.org/6e92ff/jamesujeon" width="100%" />
+									</div>
+								</div>
+							</div>
+							<div class="card small">
+								<h3>개요</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
+							</div>
+						</div>
+					</div>
+					<div id="food" class="content">
+						<h2 class="title">Overview</h2>
+						<div class="row">
+							<div class="card large">
+								<h3>개요</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
+							</div>
+							<div class="card small">
+								<h3>개요</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="card">
+								<h3>개요</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
+							</div>
+							<div class="card">
+								<h3>개요</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
+							</div>
+							<div class="card">
+								<h3>개요</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nam! Modi illum at quia porro officia qui mollitia, perspiciatis aspernatur facilis magnam sint odio dicta sunt voluptate vitae, debitis dolorem.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="page" class="page">
+				<header class="page-header">
+					<div class="page-container">
+						<a href="#" class="page-logo">
+							<span class="text">
+								popo<span class="point"></span>
+							</span>
+						</a>
+						<a href="#" class="page-navigation">
+							<div class="line"></div>
+							<div class="line"></div>
+							<div class="line"></div>
+						</a>
+					</div>
+				</header>
+				<main class="page-main">
+					<s_article_rep>
+						<s_permalink_article_rep>
+							<div class="page-container">
+								<article class="page-content">
+									<div class="page-category">[##_article_rep_category_##]</div>
+									<div class="page-title">[##_article_rep_title_##]</div>
+									<div class="page-desc">[##_article_rep_desc_##]</div>
+									<s_rp>
+										<div class="comments-title">Comments</div>
+										<div class="comments">
+											<s_rp_container>
+												<s_rp_rep>
+													<div class="comment" id='[##_rp_rep_id_##]'>
+														<span class="control">
+															<a href="#" onclick="[##_rp_rep_onclick_reply_##]" class="write">
+																<i class="far fa-comment-dots"></i>
+															</a>
+															<a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">
+																<i class="far fa-edit"></i>
+															</a>
+														</span>
+														<div class="comment-writer">[##_rp_rep_name_##]</div>
+														<div class="comment-desc">[##_rp_rep_desc_##]</div>
+													</div>
+													<s_rp2_container>
+														<s_rp2_rep>
+															<div class="comment reply" id='[##_rp_rep_id_##]'>
+																<span class="control">
+																	<a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">
+																		<i class="far fa-edit"></i>
+																	</a>
+																</span>
+																<div class="comment-writer">[##_rp_rep_name_##]</div>
+																<div class="comment-desc">[##_rp_rep_desc_##]</div>
+															</div>
+														</s_rp2_rep>
+													</s_rp2_container>
+												</s_rp_rep>
+											</s_rp_container>
+										</div>
+										<div class="comments-title">Leave your Comment</div>
+										<s_rp_input_form>
+											<div class="comment-form">
+												<s_rp_member>
+													<div class="field">
+														<div class="guest">
+															<s_rp_guest>
+																<input type="text" name="[##_rp_input_name_##]" placeholder="Name" value="[##_guest_name_##]">
+																<input type="password" name="[##_rp_input_password_##]" maxlength="8" placeholder="Password" value="[##_rp_admin_check_##]">
+															</s_rp_guest>
+														</div>
+														<div class="secret">
+															<input type="checkbox" name="[##_rp_input_is_secret_##]" id="secret">
+															<label for="secret" tabindex="0">Secret</label>
+														</div>
+													</div>
+												</s_rp_member>
+												<textarea name="[##_rp_input_comment_##]" cols="" rows="4" placeholder="Your comment."></textarea>
+												<div class="submit">
+													<button type="submit" class="btn" onclick="[##_rp_onclick_submit_##]">Post Comment</button>
+												</div>
+											</div>
+										</s_rp_input_form>
+									</s_rp>
+								</article>
+								<div class="page-side-container">
+								</div>
+							</div>
+						</s_permalink_article_rep>
+					</s_article_rep>
+				</main>
+			</section>
+			<div id="loading">
+				<img src="./images/spinner.svg">
+			</div>
+		</s_t3>
+	</body>
+	<script src="./images/db.1.work.js"></script>
+	<script>
+		const isPage = document.querySelector('#body').dataset.type === 'tt-body-page';
+		if(isPage) {
+			document.querySelector('#loading img').src = './images/spinner-green.svg';
+		}
+	</script>
+	<script src="./images/script.js"></script>
 </html>

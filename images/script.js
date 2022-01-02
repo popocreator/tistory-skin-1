@@ -17,7 +17,7 @@ function commingSoon() {
 
 function bodyCheck() {
   const HOME = "tt-body-index";
-  const POST_LIST = "tt-body-page";
+  const POST = "tt-body-page";
   const CATEGORY_LIST = "tt-body-category";
   const SEARCH_LIST = "tt-body-search";
   const GUESTBOOK_LIST = "tt-body-guestbook";
@@ -27,22 +27,27 @@ function bodyCheck() {
     case HOME:
       document.querySelector("#drawer").style.display = "flex";
       document.querySelector("#contents").style.display = "flex";
+      document.querySelector("#page").style.display = "none";
       break;
     case POST:
       document.querySelector("#drawer").style.display = "none";
-      document.querySelector("#contents").style.display = "flex";
+      document.querySelector("#contents").style.display = "none";
+      document.querySelector("#page").style.display = "flex";
       break;
     case CATEGORY_LIST:
       document.querySelector("#drawer").style.display = "flex";
       document.querySelector("#contents").style.display = "flex";
+      document.querySelector("#page").style.display = "none";
       break;
     case SEARCH_LIST:
       document.querySelector("#drawer").style.display = "flex";
       document.querySelector("#contents").style.display = "flex";
+      document.querySelector("#page").style.display = "none";
       break;
     case GUESTBOOK_LIST:
       document.querySelector("#drawer").style.display = "none";
       document.querySelector("#contents").style.display = "none";
+      document.querySelector("#page").style.display = "none";
       break;
     default:
       break;
@@ -66,10 +71,7 @@ function init() {
 
 window.onload = function () {
   setNow();
-  document.getElementById("loading").style.display = "none";
-  // init();
-  renderWorksStatus();
-  renderWorks();
+  init();
 };
 
 // 페이지 타입	body_id (data-body-type)
