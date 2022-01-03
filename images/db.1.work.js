@@ -33,7 +33,7 @@ const work = [
     title: "가이드 모달",
     link: "/40",
     translation: ["ko", ""],
-    status: "todo"
+    status: "done"
   }
 ];
 
